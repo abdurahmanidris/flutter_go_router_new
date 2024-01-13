@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:go_router_samplexx/project/routes/app_route_constants.dart';
+import 'package:flutter_go_router_new/project/routes/app_route_constants.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:go_router_samplexx/pages/about.dart';
-import 'package:go_router_samplexx/pages/contact_us.dart';
-import 'package:go_router_samplexx/pages/error_page.dart';
-import 'package:go_router_samplexx/pages/home.dart';
-import 'package:go_router_samplexx/pages/profile.dart';
-import 'package:go_router_samplexx/project/routes/app_route_constants.dart';
+import 'package:flutter_go_router_new/pages/about.dart';
+import 'package:flutter_go_router_new/pages/contact_us.dart';
+import 'package:flutter_go_router_new/pages/error_page.dart';
+import 'package:flutter_go_router_new/pages/home.dart';
+import 'package:flutter_go_router_new/pages/profile.dart';
+import 'package:flutter_go_router_new/project/routes/app_route_constants.dart';
 
 class MyAppRouter {
   GoRouter router = GoRouter(

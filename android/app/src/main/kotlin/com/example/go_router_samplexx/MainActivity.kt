@@ -1,4 +1,4 @@
-package com.example.go_router_samplexx
+package com.example.flutter_go_router_new
 
 import io.flutter.embedding.android.FlutterActivity
 
