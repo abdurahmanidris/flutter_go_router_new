@@ -1,21 +1,26 @@
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:go_router_samplexx/project/routes/app_route_config.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
+  GoRouter router = MyAppRouter().router;
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      routeInformationParser: MyAppRouter().router.routeInformationParser,
-      routerDelegate: MyAppRouter().router.routerDelegate,
+      // routeInformationParser: MyAppRouter().router.routeInformationParser,
+      // routerDelegate: MyAppRouter().router.routerDelegate,
+      routerConfig: router,
     );
   }
-}*/
+}
 
-// Copyright 2013 The Flutter Authors. All rights reserved.
+/*// Copyright 2013 The Flutter Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -102,4 +107,4 @@ class DetailsScreen extends StatelessWidget {
       ),
     );
   }
-}
+}*/

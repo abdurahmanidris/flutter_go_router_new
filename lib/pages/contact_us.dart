@@ -9,7 +9,7 @@ class ContactUS extends StatelessWidget {
       appBar: AppBar(),
       body: Container(
         child: Center(
-          child: Text('ContactUS'),
+          child: Text('This is ContactUS page.'),
         ),
       ),
     );

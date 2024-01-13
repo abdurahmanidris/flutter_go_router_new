@@ -36,6 +36,6 @@ class MyAppRouter {
             }),
       ],
       errorPageBuilder: (context, state) {
-        return MaterialPage(child: ErrorPage());
+        return const MaterialPage(child: ErrorPage());
       });
 }

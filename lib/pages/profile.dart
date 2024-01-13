@@ -9,7 +9,7 @@ class Profile extends StatelessWidget {
       appBar: AppBar(),
       body: Container(
         child: Center(
-          child: Text('Profile'),
+          child: Text('This is Profile page.'),
         ),
       ),
     );
