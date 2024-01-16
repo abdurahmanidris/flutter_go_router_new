@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_go_router_new/drawer/change_pin_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_go_router_new/pages/about.dart';
 import 'package:flutter_go_router_new/pages/contact_us.dart';
@@ -9,19 +10,33 @@ import 'package:flutter_go_router_new/project/routes/app_route_constants.dart';
 
 class MyAppRouter {
   GoRouter router = GoRouter(
-      routes: [
+      routes: <GoRoute>[
         GoRoute(
-            name: MyAppRoteConstatnts.homeRouteName,
-            path: '/',
-            pageBuilder: (context, state) {
-              return const MaterialPage(child: Home());
-            }),
+          name: MyAppRoteConstatnts.homeRouteName,
+          path: '/',
+          pageBuilder: (context, state) {
+            return const MaterialPage(child: Home());
+          },
+          routes: [
+            GoRoute(
+              path: 'changePIN',
+              // name: changePIN,
+              pageBuilder: (context, state) {
+                return NoTransitionPage(
+                    child: ChangePINScreen(
+                  key: state.pageKey,
+                ));
+              },
+            ),
+          ],
+        ),
         GoRoute(
-            name: MyAppRoteConstatnts.profileRouteName,
-            path: '/profile',
-            pageBuilder: (context, state) {
-              return const MaterialPage(child: Profile());
-            }),
+          name: MyAppRoteConstatnts.profileRouteName,
+          path: '/profile',
+          pageBuilder: (context, state) {
+            return const MaterialPage(child: Profile());
+          },
+        ),
         GoRoute(
             name: MyAppRoteConstatnts.aboutRouteName,
             path: '/about',

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_go_router_new/drawer/drawer_widget.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_go_router_new/project/routes/app_route_constants.dart';
 
@@ -12,7 +13,7 @@ class Home extends StatelessWidget {
           title: const Text("Homepage"),
           backgroundColor: Colors.blue,
         ),
-        drawer: Drawer(),
+        drawer: const DrawerWidget(),
         body: Column(
           children: [
             Container(
