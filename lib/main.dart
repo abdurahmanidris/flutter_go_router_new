@@ -16,6 +16,13 @@ class MyApp extends StatelessWidget {
       // routeInformationParser: MyAppRouter().router.routeInformationParser,
       // routerDelegate: MyAppRouter().router.routerDelegate,
       routerConfig: router,
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+        appBarTheme: const AppBarTheme(
+          color: Colors
+              .green, //<---Set the desired color here like my branding color #000132
+        ),
+      ),
     );
   }
 }

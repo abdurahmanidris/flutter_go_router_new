@@ -20,12 +20,13 @@ class MyAppRouter {
           routes: [
             GoRoute(
               path: 'changePIN',
-              // name: changePIN,
+              name: MyAppRoteConstatnts.changePINRouteName,
               pageBuilder: (context, state) {
-                return NoTransitionPage(
+                /*return NoTransitionPage(
                     child: ChangePINScreen(
                   key: state.pageKey,
-                ));
+                ));*/
+                return const MaterialPage(child: ChangePINScreen());
               },
             ),
           ],

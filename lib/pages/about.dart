@@ -8,7 +8,7 @@ class About extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("About Page"),
-        backgroundColor: Colors.blue,
+        // backgroundColor: Colors.blue,
       ),
       body: Container(
         child: Center(
