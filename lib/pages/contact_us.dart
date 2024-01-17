@@ -6,7 +6,10 @@ class ContactUS extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text("Contact Page"),
+        // backgroundColor: Colors.blue,
+      ),
       body: Container(
         child: Center(
           child: Text('This is ContactUS page.'),

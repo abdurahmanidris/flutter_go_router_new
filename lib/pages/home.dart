@@ -11,7 +11,7 @@ class Home extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text("Homepage"),
-          backgroundColor: Colors.blue,
+          // backgroundColor: Colors.blue,
         ),
         drawer: const DrawerWidget(),
         body: Column(

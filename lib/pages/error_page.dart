@@ -9,7 +9,7 @@ class ErrorPage extends StatelessWidget {
       appBar: AppBar(),
       body: Container(
         child: Center(
-          child: Text('ErrorPage'),
+          child: Text('ErrorPage, no page found'),
         ),
       ),
     );
