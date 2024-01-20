@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:flutter_go_router_new/drawer/change_pin_screen.dart';
+import 'package:flutter_go_router_new/pagesnew/cart_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_go_router_new/pages/about.dart';
 import 'package:flutter_go_router_new/pages/contact_us.dart';
@@ -29,14 +30,24 @@ class MyAppRouter {
                 return const MaterialPage(child: ChangePINScreen());
               },
             ),
+            GoRoute(
+              name: MyAppRoteConstatnts.profileRouteName,
+              path: 'profile',
+              pageBuilder: (context, state) {
+                return const MaterialPage(child: Profile());
+              },
+            ),
+            GoRoute(
+              path: 'cart',
+              name: 'cart',
+              pageBuilder: (context, state) {
+                return NoTransitionPage(
+                    child: CartScreen(
+                  key: state.pageKey,
+                ));
+              },
+            ),
           ],
-        ),
-        GoRoute(
-          name: MyAppRoteConstatnts.profileRouteName,
-          path: '/profile',
-          pageBuilder: (context, state) {
-            return const MaterialPage(child: Profile());
-          },
         ),
         GoRoute(
             name: MyAppRoteConstatnts.aboutRouteName,
@@ -54,4 +65,4 @@ class MyAppRouter {
       errorPageBuilder: (context, state) {
         return const MaterialPage(child: ErrorPage());
       });
-}
+}*/

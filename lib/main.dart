@@ -1,28 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:flutter_go_router_new/project/routes/app_route_config.dart';
+import 'package:flutter_go_router_new/constants/global_variables.dart';
+import 'package:flutter_go_router_new/project/routesnew/go_router_provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(const ProviderScope(child: MyApp()));
+}
 
-class MyApp extends StatelessWidget {
-  MyApp({super.key});
+class MyApp extends ConsumerStatefulWidget {
+  const MyApp({super.key});
 
-  GoRouter router = MyAppRouter().router;
+  @override
+  ConsumerState<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends ConsumerState<MyApp> {
+  // GoRouter router = MyAppRouter().router;
 
   @override
   Widget build(BuildContext context) {
+    final router = ref.watch(goRouterProvider);
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       // routeInformationParser: MyAppRouter().router.routeInformationParser,
       // routerDelegate: MyAppRouter().router.routerDelegate,
       routerConfig: router,
       theme: ThemeData(
+          scaffoldBackgroundColor: GlobalVariables.backgroundColor,
+          colorScheme: const ColorScheme.light(
+            primary: GlobalVariables.secondaryColor,
+          ),
+          appBarTheme: const AppBarTheme(
+              elevation: 0,
+              iconTheme: IconThemeData(color: Colors.white),
+              color: Colors.green),
+          useMaterial3: false),
+      /*theme: ThemeData(
         primarySwatch: Colors.orange,
         appBarTheme: const AppBarTheme(
-          color: Colors
-              .green, //<---Set the desired color here like my branding color #000132
+          color: Colors.green,
         ),
-      ),
+      ),*/
     );
   }
 }

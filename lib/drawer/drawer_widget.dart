@@ -60,7 +60,20 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             title: const Text(' My Profile '),
             onTap: () {
               Navigator.pop(context);
-              context.go('/profile');
+              // context.go('/profile');
+              GoRouter.of(context).push('/profile/120');
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.screen_lock_landscape),
+            title: const Text(' Auth Screen '),
+            onTap: () {
+              Navigator.pop(context);
+              // Router.neglect(context, () => context.go('/setting'));
+              /*Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SettingScreen()));*/
+              context.go('/authScreen');
+              // GoRouter.of(context).push('/authScreen');
             },
           ),
           ListTile(
